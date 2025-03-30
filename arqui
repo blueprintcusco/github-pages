@@ -1,0 +1,64 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { motion } from "framer-motion";
+
+export default function ArquitecturaWeb() {
+  return (
+    <div className="bg-[#08324D] text-white min-h-screen p-8 font-sans">
+      {/* Header */}
+      <header className="flex justify-between items-center p-4 bg-[#34582C] rounded-2xl shadow-lg">
+        <h1 className="text-3xl font-bold text-[#E7640D]">Extruxion Arquitectura</h1>
+        <nav className="space-x-6">
+          <a href="#proyectos" className="hover:text-[#008272]">Proyectos</a>
+          <a href="#servicios" className="hover:text-[#008272]">Servicios</a>
+          <a href="#contacto" className="hover:text-[#008272]">Contacto</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="text-center py-20 bg-cover bg-center" style={{ backgroundImage: "url('/path-to-hero-image.jpg')" }}>
+        <div className="bg-black bg-opacity-50 p-10 rounded-xl">
+          <h2 className="text-5xl font-extrabold text-[#E7640D]">Diseño y Construcción Moderna</h2>
+          <p className="text-lg mt-4">Transformamos ideas en espacios funcionales y estéticos.</p>
+          <Button className="mt-6 bg-[#34582C] text-white px-6 py-3 rounded-xl hover:bg-[#008272]">
+            Conoce más
+          </Button>
+        </div>
+      </section>
+
+      {/* Proyectos */}
+      <section id="proyectos" className="py-16 bg-[#0D1B2A]">
+        <h3 className="text-4xl text-center text-[#E7640D] font-semibold">Nuestros Proyectos</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <Card className="bg-[#34582C] text-white shadow-lg">
+            <CardContent>
+              <h4 className="text-2xl">Residencia Moderna</h4>
+              <p>Un diseño vanguardista con materiales ecológicos.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-[#34582C] text-white shadow-lg">
+            <CardContent>
+              <h4 className="text-2xl">Edificio Empresarial</h4>
+              <p>Optimización del espacio y eficiencia energética.</p>
+            </CardContent>
+          </Card>
+          <Card className="bg-[#34582C] text-white shadow-lg">
+            <CardContent>
+              <h4 className="text-2xl">Centro Comercial</h4>
+              <p>Innovación en diseño y estructura.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Contacto */}
+      <section id="contacto" className="py-16 text-center bg-[#1B263B]">
+        <h3 className="text-4xl text-[#E7640D] font-semibold">Contáctanos</h3>
+        <p className="text-lg mt-4">¿Tienes un proyecto en mente? Escríbenos y hagámoslo realidad.</p>
+        <Button className="mt-6 bg-[#34582C] text-white px-6 py-3 rounded-xl hover:bg-[#008272]">
+          Enviar mensaje
+        </Button>
+      </section>
+    </div>
+  );
+}
